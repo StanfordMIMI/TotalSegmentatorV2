@@ -11,7 +11,7 @@ else:
     requests_version = ''  # No fixed version for Python 3.10 and higher
 
 
-setup(name='TotalSegmentator',
+setup(name='TotalSegmentatorV2',
         version='2.0.1',
         description='Robust segmentation of 104 classes in CT images.',
         long_description="See Readme.md on github for more details.",
