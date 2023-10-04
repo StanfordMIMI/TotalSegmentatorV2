@@ -38,7 +38,7 @@ def show_license_info():
         sys.exit(0)
 
 
-def totalsegmentator(input, output, ml=False, nr_thr_resamp=1, nr_thr_saving=6,
+def totalsegmentator(input, output, task_ids=[291, 292, 293, 294, 295], ml=False, nr_thr_resamp=1, nr_thr_saving=6,
                      fast=False, nora_tag="None", preview=False, task="total", roi_subset=None,
                      statistics=False, radiomics=False, crop_path=None, body_seg=False,
                      force_split=False, output_type="nifti", quiet=False, verbose=False, test=0,
@@ -87,7 +87,7 @@ def totalsegmentator(input, output, ml=False, nr_thr_resamp=1, nr_thr_saving=6,
             crop = None
             if not quiet: print("Using 'fast' option: resampling to lower resolution (3mm)")
         else:
-            task_id = [291, 292, 293, 294, 295]
+            task_id = task_ids
             resample = 1.5
             trainer = "nnUNetTrainerNoMirroring"
             crop = None
