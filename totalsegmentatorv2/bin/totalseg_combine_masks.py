@@ -7,8 +7,8 @@ import subprocess
 import nibabel as nib
 import numpy as np
 
-from totalsegmentator.map_to_binary import class_map_5_parts
-from totalsegmentator.libs import combine_masks
+from totalsegmentatorv2.map_to_binary import class_map_5_parts
+from totalsegmentatorv2.libs import combine_masks
 
 
 def main():

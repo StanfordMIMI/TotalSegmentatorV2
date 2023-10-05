@@ -4,8 +4,8 @@ import sys
 from pathlib import Path
 import argparse
 
-from totalsegmentator.libs import download_pretrained_weights
-from totalsegmentator.config import setup_totalseg, set_config_key
+from totalsegmentatorv2.libs import download_pretrained_weights
+from totalsegmentatorv2.config import setup_totalseg, set_config_key
 
 
 def main():

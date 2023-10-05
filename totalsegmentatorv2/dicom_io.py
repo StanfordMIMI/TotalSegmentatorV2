@@ -12,7 +12,7 @@ import numpy as np
 import nibabel as nib
 import dicom2nifti
 
-from totalsegmentator.config import get_weights_dir
+from totalsegmentatorv2.config import get_weights_dir
 
 
 

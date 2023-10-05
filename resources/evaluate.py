@@ -12,7 +12,7 @@ from p_tqdm import p_map
 # package from: https://github.com/deepmind/surface-distance
 from surface_distance import compute_surface_distances, compute_surface_dice_at_tolerance  
 
-from totalsegmentator.map_to_binary import class_map_5_parts
+from totalsegmentatorv2.map_to_binary import class_map_5_parts
 
 
 def dice_score(y_true, y_pred):

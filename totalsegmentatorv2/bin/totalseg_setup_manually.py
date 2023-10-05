@@ -7,7 +7,7 @@ import subprocess
 import nibabel as nib
 import numpy as np
 
-from totalsegmentator.config import setup_totalseg
+from totalsegmentatorv2.config import setup_totalseg
 
 
 def main():

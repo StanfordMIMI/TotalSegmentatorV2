@@ -15,8 +15,8 @@ import requests
 import numpy as np
 import nibabel as nib
 
-from totalsegmentator.map_to_binary import class_map, class_map_5_parts, commercial_models
-from totalsegmentator.config import get_totalseg_dir, get_weights_dir, is_valid_license, has_valid_license, has_valid_license_offline
+from totalsegmentatorv2.map_to_binary import class_map, class_map_5_parts, commercial_models
+from totalsegmentatorv2.config import get_totalseg_dir, get_weights_dir, is_valid_license, has_valid_license, has_valid_license_offline
 
 """
 Helpers to suppress stdout prints from nnunet

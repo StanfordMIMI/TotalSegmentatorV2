@@ -8,13 +8,13 @@ import numpy as np
 import nibabel as nib
 import torch
 
-from totalsegmentator.statistics import get_basic_statistics, get_radiomics_features_for_entire_dir
-from totalsegmentator.libs import download_pretrained_weights
-from totalsegmentator.config import setup_nnunet, setup_totalseg, increase_prediction_counter
-from totalsegmentator.config import send_usage_stats, set_license_number, has_valid_license_offline
-from totalsegmentator.config import get_config_key, set_config_key
-from totalsegmentator.map_to_binary import class_map
-from totalsegmentator.map_to_total import map_to_total
+from totalsegmentatorv2.statistics import get_basic_statistics, get_radiomics_features_for_entire_dir
+from totalsegmentatorv2.libs import download_pretrained_weights
+from totalsegmentatorv2.config import setup_nnunet, setup_totalseg, increase_prediction_counter
+from totalsegmentatorv2.config import send_usage_stats, set_license_number, has_valid_license_offline
+from totalsegmentatorv2.config import get_config_key, set_config_key
+from totalsegmentatorv2.map_to_binary import class_map
+from totalsegmentatorv2.map_to_total import map_to_total
 
 
 def show_license_info():
@@ -74,7 +74,7 @@ def totalsegmentator(input, output, task_ids=[291, 292, 293, 294, 295], ml=False
         print("TotalSegmentator sends anonymous usage statistics. If you want to disable it check the documentation.")
         set_config_key("statistics_disclaimer_shown", True)
 
-    from totalsegmentator.nnunet import nnUNet_predict_image  # this has to be after setting new env vars
+    from totalsegmentatorv2.nnunet import nnUNet_predict_image  # this has to be after setting new env vars
 
     crop_addon = [3, 3, 3]  # default value
 

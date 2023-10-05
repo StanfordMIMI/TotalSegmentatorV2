@@ -16,7 +16,7 @@ from multiprocessing import Pool
 import tempfile
 import torch
 
-from totalsegmentator.libs import nostdout
+from totalsegmentatorv2.libs import nostdout
 
 # todo important: change
 # with nostdout():
@@ -24,18 +24,18 @@ from totalsegmentator.libs import nostdout
 from nnunetv2.inference.predict_from_raw_data import nnUNetPredictor
 from nnunetv2.utilities.file_path_utilities import get_output_folder
 
-from totalsegmentator.map_to_binary import class_map, class_map_5_parts, map_taskid_to_partname
-from totalsegmentator.alignment import as_closest_canonical_nifti, undo_canonical_nifti
-from totalsegmentator.alignment import as_closest_canonical, undo_canonical
-from totalsegmentator.resampling import change_spacing
-from totalsegmentator.libs import combine_masks, compress_nifti, check_if_shape_and_affine_identical, reorder_multilabel_like_v1
-from totalsegmentator.dicom_io import dcm_to_nifti, save_mask_as_rtstruct
-from totalsegmentator.cropping import crop_to_mask_nifti, undo_crop_nifti
-from totalsegmentator.cropping import crop_to_mask, undo_crop
-from totalsegmentator.postprocessing import remove_outside_of_mask, extract_skin, remove_auxiliary_labels
-from totalsegmentator.postprocessing import keep_largest_blob_multilabel, remove_small_blobs_multilabel
-from totalsegmentator.nifti_ext_header import save_multilabel_nifti
-from totalsegmentator.statistics import get_basic_statistics
+from totalsegmentatorv2.map_to_binary import class_map, class_map_5_parts, map_taskid_to_partname
+from totalsegmentatorv2.alignment import as_closest_canonical_nifti, undo_canonical_nifti
+from totalsegmentatorv2.alignment import as_closest_canonical, undo_canonical
+from totalsegmentatorv2.resampling import change_spacing
+from totalsegmentatorv2.libs import combine_masks, compress_nifti, check_if_shape_and_affine_identical, reorder_multilabel_like_v1
+from totalsegmentatorv2.dicom_io import dcm_to_nifti, save_mask_as_rtstruct
+from totalsegmentatorv2.cropping import crop_to_mask_nifti, undo_crop_nifti
+from totalsegmentatorv2.cropping import crop_to_mask, undo_crop
+from totalsegmentatorv2.postprocessing import remove_outside_of_mask, extract_skin, remove_auxiliary_labels
+from totalsegmentatorv2.postprocessing import keep_largest_blob_multilabel, remove_small_blobs_multilabel
+from totalsegmentatorv2.nifti_ext_header import save_multilabel_nifti
+from totalsegmentatorv2.statistics import get_basic_statistics
 
 
 def _get_full_task_name(task_id: int, src: str="raw"):
@@ -427,7 +427,7 @@ def nnUNet_predict_image(file_in, file_out, task_id, model="3d_fullres", folds=N
             img_pred = nib.Nifti1Image(img_pred_pp, img_pred.affine)
 
         if preview:
-            from totalsegmentator.preview import generate_preview
+            from totalsegmentatorv2.preview import generate_preview
             # Generate preview before upsampling so it is faster and still in canonical space 
             # for better orientation.
             if not quiet: print("Generating preview...")

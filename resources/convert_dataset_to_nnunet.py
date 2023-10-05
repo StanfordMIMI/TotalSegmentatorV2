@@ -9,7 +9,7 @@ import nibabel as nib
 import pandas as pd
 from tqdm import tqdm
 
-from totalsegmentator.map_to_binary import class_map_5_parts
+from totalsegmentatorv2.map_to_binary import class_map_5_parts
 
 
 def generate_json_from_dir_v2(foldername, subjects_train, subjects_val, labels):

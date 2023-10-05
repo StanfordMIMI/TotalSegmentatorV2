@@ -128,7 +128,7 @@ totalseg_set_license -l aca_12345678910
 ### Python API
 You can run totalsegmentator via python:
 ```python
-from totalsegmentator.python_api import totalsegmentator
+from totalsegmentatorv2.python_api import totalsegmentator
 
 totalsegmentator(input_path, output_path)
 ```

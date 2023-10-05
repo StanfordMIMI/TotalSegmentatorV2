@@ -5,7 +5,7 @@ import glob
 import shutil
 import subprocess
 
-from totalsegmentator.python_api import totalsegmentator
+from totalsegmentatorv2.python_api import totalsegmentator
 
 
 if __name__ == "__main__":

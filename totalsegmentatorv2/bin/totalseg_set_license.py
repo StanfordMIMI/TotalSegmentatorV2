@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 import argparse
 
-from totalsegmentator.config import setup_totalseg, set_license_number
+from totalsegmentatorv2.config import setup_totalseg, set_license_number
 
 
 def main():

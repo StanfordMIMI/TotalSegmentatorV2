@@ -7,7 +7,7 @@ from tqdm import tqdm
 from scipy.ndimage import binary_dilation, binary_erosion, binary_closing
 from scipy import ndimage
 
-from totalsegmentator.map_to_binary import class_map
+from totalsegmentatorv2.map_to_binary import class_map
 
 
 def keep_largest_blob(data, debug=False):

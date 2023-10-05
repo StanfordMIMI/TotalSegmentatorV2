@@ -5,7 +5,7 @@ import argparse
 from pkg_resources import require
 from pathlib import Path
 
-from totalsegmentator.python_api import totalsegmentator
+from totalsegmentatorv2.python_api import totalsegmentator
 
 
 def main():

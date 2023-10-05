@@ -4,7 +4,7 @@ import sys
 import glob
 import shutil
 
-from totalsegmentator.python_api import totalsegmentator
+from totalsegmentatorv2.python_api import totalsegmentator
 
 
 def cleanup():

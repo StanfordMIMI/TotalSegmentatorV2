@@ -10,9 +10,9 @@ import numpy as np
 import nibabel as nib
 import torch
 
-from totalsegmentator.libs import download_pretrained_weights, combine_masks
-from totalsegmentator.config import setup_nnunet
-from totalsegmentator.cropping import crop_to_mask, undo_crop
+from totalsegmentatorv2.libs import download_pretrained_weights, combine_masks
+from totalsegmentatorv2.config import setup_nnunet
+from totalsegmentatorv2.cropping import crop_to_mask, undo_crop
 
 
 def main():
@@ -55,7 +55,7 @@ def main():
 
     setup_nnunet()
 
-    from totalsegmentator.nnunet import nnUNet_predict_image  # this has to be after setting new env vars
+    from totalsegmentatorv2.nnunet import nnUNet_predict_image  # this has to be after setting new env vars
 
     crop_addon = [3, 3, 3]  # default value
     download_pretrained_weights(300)

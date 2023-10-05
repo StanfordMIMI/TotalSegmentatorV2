@@ -5,7 +5,7 @@ from pathlib import Path
 import argparse
 import zipfile
 
-from totalsegmentator.config import get_totalseg_dir, get_weights_dir
+from totalsegmentatorv2.config import get_totalseg_dir, get_weights_dir
 
 
 def main():
