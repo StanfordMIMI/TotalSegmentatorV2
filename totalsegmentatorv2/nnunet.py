@@ -130,7 +130,7 @@ def nnUNet_predict(dir_in, dir_out, task_id, model="3d_fullres", folds=None,
 
 def nnUNetv2_predict(dir_in, dir_out, task_id, model="3d_fullres", folds=None,
                      trainer="nnUNetTrainer", tta=False,
-                     num_threads_preprocessing=3, num_threads_nifti_save=2,
+                     num_threads_preprocessing=1, num_threads_nifti_save=1,
                      plans="nnUNetPlans", device="cuda", quiet=False):
     """
     Identical to bash function nnUNetv2_predict
